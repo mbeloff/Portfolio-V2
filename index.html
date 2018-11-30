@@ -18,7 +18,8 @@
       <div class="container">
         <h1>Michael Beloff</h1>
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quod!</h3>
-        <div class="face"></div>
+        <div class="face-bg"><div class="face"></div></div>
+        
       </div>
     </section>
 
@@ -44,7 +45,7 @@
       </div>
       <div class="card-bottom">
         <div class="list">
-          <h4>tools of the trade</h4>
+          <h4>my toolbag</h4>
           <ul>
             <li>VS Code</li>
             <li>Adobe Creative Suite</li>
@@ -52,7 +53,7 @@
           </ul>
         </div>
         <div class="list">
-          <h4>knowledge</h4>
+          <h4>tricks of the trade</h4>
           <ul>
             <li>HTML5</li>
             <li>CSS3</li>
@@ -78,36 +79,46 @@
         <div class="item-container">
           <img src="img/boss1.png" class="gallery-item"></img>
           <div class="gallery-item-overlay">
-              <h3>Boss Roofing</h3>
-              <p>A website I designed for a Tasmanian roofing business.</p>
-              <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
-            </div>
+            <h3>Boss Roofing</h3>
+            <p>A website I designed for a Tasmanian roofing business.</p>
+            <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
+          </div>
         </div>
         <div class="item-container">
           <img src="img/budget.png" class="gallery-item"></img>
           <div class="gallery-item-overlay">
-              <h3>Budget</h3>
-              <p>A working protoype for a monthly budget app coded in JavaScript</p>
-              <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
-            </div>
+            <h3>Budget</h3>
+            <p>A working protoype for a monthly budget app coded in JavaScript</p>
+            <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
+          </div>
         </div>
         <div class="item-container">
           <img src="img/landing.png" class="gallery-item"></img>
           <div class="gallery-item-overlay">
-              <h3>Bootstrap Landing</h3>
-              <p>A quick landing page mockup made with Bootstrap</p>
-              <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
-            </div>
+            <h3>Bootstrap Landing</h3>
+            <p>A quick landing page mockup made with Bootstrap</p>
+            <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
+          </div>
         </div>
         <div class="item-container">
           <img src="img/ps2.png" class="gallery-item"></img>
           <div class="gallery-item-overlay">
-              <h3>PhotoSpot</h3>
-              <p>A personal learning project built with Mongo, Express and Node. Working user registration, image upload, comments and ratings.</p>
-              <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
-            </div>
+            <h3>PhotoSpot</h3>
+            <p>A personal learning project built with Mongo, Express and Node. Working user registration, image upload,
+              comments and ratings.</p>
+            <button class="gallery-button"><a class="gallery-link" href="#">View Site</a></button>
+          </div>
         </div>
       </div>
+    </section>
+
+    <section class="contact-section">
+      <form class="contact-form" name="contact" method="POST" netlify>
+        <label class="form-label">Your Name: <input class="form-input" type="text" name="name" /></label>
+        <label class="form-label">Your Email: <input class="form-input" type="email" name="email" /></label>
+        <label class="form-label">Message: <textarea class="form-input form-message" name="message"></textarea></label>
+        <button class="form-button" type="submit">Send</button>
+      </form>
     </section>
   </main>
 
