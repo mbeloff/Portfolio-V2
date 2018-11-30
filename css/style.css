@@ -1,7 +1,6 @@
 :root {
   --primary: #ffa977;
   --secondary: #ff7789;
-  --tertiary: #cdff4e;
   --shadow: 0px 10px 20px 2px rgba(0,0,0,0.08), 0px 10px 5px -8px rgba(0,0,0,0.02);
 }
 
@@ -15,6 +14,47 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: rgb(71, 67, 64);
+}
+
+header {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(0, 1200px) minmax(20px, 1fr);
+  grid-column: span 3;
+  width: 100%;
+  background: white;
+  position: fixed;
+  z-index: 100;
+  height: 65px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-column: 2/3;
+}
+
+.logo {
+  font-weight: 600;
+  padding: 8px;
+  align-self: center;
+  text-decoration: none;
+  color: var(--primary);
+  margin: 0;
+  font-family: 'Damion', cursive;
+  font-size: 2em;
+}
+
+.nav-link {
+  font-weight: 600;
+  padding: 8px;
+  align-self: center;
+  text-decoration: none;
+  color: var(--primary);
+  border: 3px solid var(--primary);
+  border-radius: 8px;
+  margin: 0;
 }
 
 main {
@@ -95,6 +135,7 @@ main {
 
 .bio p {
   width: 80%;
+  max-width: 1100px;
   font-size: 1.5em;
   color: white;
   margin: auto;
@@ -207,7 +248,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 100;
+  z-index: 10;
   background: black;
   width: 100%;
   height: 98.7%;
@@ -266,6 +307,10 @@ main {
   background: var(--primary);
 }
 
+.contact-heading {
+  color: white;
+}
+
 .contact-form {
   width: auto;
   min-width: 250px;
@@ -302,14 +347,9 @@ main {
   color: white;
   width: 125px;
   height: 50px;
-  border: none;
+  border: rgba(255, 255, 255, .5) solid 1px;
   border-radius: 10px;
-  background: 
-    linear-gradient(-45deg, #EE7752, rgb(243, 75, 139), rgb(46, 176, 223), #23D5AB, rgb(243, 75, 139));
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+  background: var(--secondary);
   align-self: center;
   text-transform: uppercase;
   font-weight: 600;
