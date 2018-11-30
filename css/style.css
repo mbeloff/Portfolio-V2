@@ -160,6 +160,12 @@ main {
   color: var(--primary);
 }
 
+.list-h4 {
+  font-weight: 400;
+  color: var(--primary);
+  margin-bottom: 0;
+}
+
 .skills-p {
   width: 80%;
   margin: auto;
@@ -169,6 +175,7 @@ main {
 .skills ul {
  list-style: none;
  padding: 0;
+ font-size: .8em;
 }
 
 .list {
