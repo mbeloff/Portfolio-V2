@@ -1,0 +1,257 @@
+:root {
+  --primary: #ffa977;
+  --secondary: #ff7789;
+  --tertiary: #cdff4e;
+  --shadow: 0px 11px 19px 2px rgba(0,0,0,0.14), 0px 11px 5px -8px rgba(0,0,0,0.05);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: rgb(71, 67, 64);
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(25px, 1fr) minmax(400px, 1200px) minmax(25px, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero {
+  display: grid;
+  height: 60vh;
+  grid-column: 2 / 3;
+  width: 100%;
+  background: white;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 100px;
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-weight: 400;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.hero h3 {
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.hero .container {
+  display: grid;
+  text-align: center;
+  justify-items: center;
+}
+
+.face {
+  background-image: url(../img/portrait.jpg);
+  height: 200px;
+  width: 200px;
+  background-size: contain;
+  border-radius: 50%;
+  border: 10px solid var(--primary);
+    -webkit-filter: sepia(.25);
+    filter: sepia(.25);
+}
+
+.bio {
+  display: grid;
+  grid-template-rows: 250px 100px;
+  background: var(--primary);
+  width: 100%;
+  margin-top: 150px;
+  grid-row: 2/3;
+  grid-column: span 3;
+}
+
+.bio p {
+  width: 80%;
+  font-size: 1.5em;
+  color: white;
+  margin: auto;
+}
+
+.skills {
+  margin-top: -125px;
+  margin-bottom: 10px;
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  width: 95%;
+  max-width: 800px;
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+
+.skills-h3 {
+  color: var(--primary);
+}
+
+.skills-p {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.skills ul {
+ list-style: none;
+ padding: 0;
+}
+
+.list {
+  width: 50%;
+}
+
+.card-bottom {
+  grid-column: span 2;
+  display: flex;
+  width: 100%;
+  background: white;
+  border: 1px var(--primary) solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 0;
+  justify-content: center;
+}
+
+.card {  
+  background: white;
+  border: 1px var(--primary) solid;
+  padding-top: 25px;
+}
+
+.card i {
+  color: var(--primary);
+}
+
+.card-left {
+  border-top-left-radius: 10px;
+  border-right: 0;
+}
+
+.card-right {
+  border-top-right-radius: 10px;
+}
+
+.portfolio {
+  margin-top: 50px;
+  background: white;
+  grid-column: span 3;
+  width: 100%;
+  display: grid;
+  border-top: 5px var(--primary) solid;
+  border-bottom: 5px var(--primary) solid;
+  grid-template-columns: minmax(25px, 1fr) minmax(400px, 1300px) minmax(25px, 1fr);
+  grid-template-rows: auto;
+  align-content: center;
+  padding-bottom: 25px;
+}
+
+.portfolio h1 {
+  grid-column: 2/3;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.gallery {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+}
+
+.item-container {
+  margin: 10px;
+  position: relative;
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
+  background: black;
+  width: 100%;
+  height: 98.7%;
+  bottom: 4px;
+  border-radius: 5px;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.gallery-item-overlay > * {
+  transition: .4s ease-in-out;
+}
+
+.gallery-item-overlay:hover {
+  opacity: 1;
+  background: rgba(0,0,0,.75);
+}
+
+.gallery-item-overlay:hover > * {
+  opacity: 1;
+}
+
+.gallery-button {
+  width: 25%;
+  height: 15%;
+  border: none;
+  border-radius: 10px;
+  /* background: var(--secondary); */
+  background: linear-gradient(-30deg,  #ff737f,#ffa977, #ffa977 );
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.gallery-link {
+  text-decoration: none;
+  color: white;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+
+footer {
+  padding: 10px 0px 10px 0;
+  text-align: center
+}
+
+footer p {
+  margin: 10px 0 0 0;
+  font-size: .75em;
+}
+
+.footer-icon {
+  color: var(--primary);
+}
