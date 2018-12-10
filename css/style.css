@@ -1,6 +1,7 @@
 :root {
-  --primary: #ffa977;
+  --primary: #f03f57;
   --secondary: #ff7789;
+  --tertiary: #29e78e;
   --shadow: 0px 10px 20px 2px rgba(0,0,0,0.08), 0px 10px 5px -8px rgba(0,0,0,0.02);
 }
 
@@ -10,16 +11,13 @@
 
 body {
   margin: 0;
-  background: white;
+  /* background: white; */
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: rgb(71, 67, 64);
 }
 
 header {
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(0, 1200px) minmax(20px, 1fr);
-  grid-column: span 3;
   width: 100%;
   background: white;
   position: fixed;
@@ -30,9 +28,10 @@ header {
 
 nav {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   justify-content: space-between;
-  grid-column: 2/3;
 }
 
 .logo {
@@ -44,6 +43,7 @@ nav {
   margin: 0;
   font-family: 'Damion', cursive;
   font-size: 2em;
+  margin-left: 20px;
 }
 
 .nav-link {
@@ -54,23 +54,21 @@ nav {
   color: var(--primary);
   border: 3px solid var(--primary);
   border-radius: 8px;
-  margin: 0;
+  margin-right: 20px;
 }
 
 main {
   display: grid;
-  grid-template-columns: minmax(25px, 1fr) minmax(400px, 1200px) minmax(25px, 1fr);
-  grid-template-rows: auto;
   justify-items: center;
   text-align: center;
 }
 
 .hero {
   display: grid;
-  height: 60vh;
-  grid-column: 2 / 3;
-  width: 100%;
   background: white;
+  height: 60vh;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   align-items: center;
   border-radius: 5px;
   margin-top: 100px;
@@ -88,6 +86,8 @@ main {
 .hero h3 {
   margin-top: 5px;
   font-weight: 300;
+  letter-spacing: .75em;
+  word-spacing: 1em;
 }
 
 .hero .container {
@@ -114,23 +114,15 @@ main {
   position: relative;
   height: 210px;
   width: 210px;
-  background: 
-    linear-gradient(-45deg, var(--primary), rgb(243, 75, 139), var(--primary), var(--primary));
-	background-size: 200% 200%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
   border-radius: 50%;
 }
 
 .bio {
-  display: grid;
-  grid-template-rows: 250px 100px;
   background: var(--primary);
+  background-position: center;
   width: 100%;
-  margin-top: 150px;
-  grid-row: 2/3;
-  grid-column: span 3;
+  margin-top: 50px;
+  padding-bottom: 150px;
 }
 
 .bio p {
@@ -139,12 +131,13 @@ main {
   font-size: 1.5em;
   color: white;
   margin: auto;
+  padding-top: 50px
 }
 
 .skills {
-  margin-top: -125px;
+  margin: auto;
+  margin-top: -100px;
   margin-bottom: 10px;
-  grid-column: 2/3;
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
@@ -216,26 +209,22 @@ main {
 .portfolio {
   margin-top: 50px;
   background: white;
-  grid-column: span 3;
   width: 100%;
   display: grid;
   border-top: 5px var(--primary) solid;
   border-bottom: 5px var(--primary) solid;
-  grid-template-columns: minmax(25px, 1fr) minmax(400px, 1300px) minmax(25px, 1fr);
   grid-template-rows: auto;
   align-content: center;
   padding-bottom: 25px;
 }
 
 .portfolio h1 {
-  grid-column: 2/3;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 25px;
 }
 
 .gallery {
-  grid-column: 2/3;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -283,9 +272,9 @@ main {
 .gallery-button {
   width: 25%;
   height: 15%;
-  border: none;
+  border: solid 1px rgba(255, 255, 255, .5);
   border-radius: 10px;
-  background: linear-gradient(-30deg,  #ff737f,#ffa977, #ffa977 );
+  background: linear-gradient(-30deg,  #ff9277,var(--secondary), var(--primary) );
   align-self: center;
   text-transform: uppercase;
   font-weight: 600;
@@ -294,6 +283,7 @@ main {
 .gallery-link {
   text-decoration: none;
   color: white;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }
 
 .gallery-item {
@@ -306,9 +296,8 @@ main {
 }
 
 .contact-section {
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 50px;
-  grid-column: span 3;
   display: grid;
   width: 100%;
   background: var(--primary);
@@ -320,7 +309,7 @@ main {
 
 .contact-form {
   width: auto;
-  min-width: 250px;
+  min-width: 200px;
   justify-self: center;
   text-align: left;
   border: rgba(255, 255, 255, .25) solid 1px;
@@ -338,12 +327,12 @@ main {
   border-radius: 5px;
   height: 30px;
   box-shadow: inset 0 1px 5px rgba(0,0,0,.25);
-  font-size: 1.1em;
+  font-size: 1em;
+  min-width: 200px;
 }
 
 .form-message {
-  min-width: 250px;
-  width: 400px;
+  min-width: 200px;
   max-width: 700px;
   min-height: 4em;
   max-height: 15em;
@@ -356,13 +345,14 @@ main {
   height: 50px;
   border: rgba(255, 255, 255, .5) solid 1px;
   border-radius: 10px;
-  background: var(--secondary);
   align-self: center;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
+  background: linear-gradient(-30deg,  #ff9277,var(--secondary) );
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }
 
 .form-label {
@@ -373,7 +363,8 @@ main {
 
 footer {
   padding: 10px 0px 10px 0;
-  text-align: center
+  text-align: center;
+  width: 100%;
 }
 
 footer p {
@@ -395,4 +386,20 @@ footer p {
 	100% {
 		background-position: 0% 50%
 	}
+}
+
+@-webkit-keyframes GradientRotate {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes GradientRotate {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes GradientRotate { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
