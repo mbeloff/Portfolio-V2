@@ -262,7 +262,16 @@ main {
   -moz-transition: opacity .6s ease-in-out;
   -o-transition: opacity .6s ease-in-out;
   transition: opacity .6s ease-in-out;
+}
 
+.gallery-description {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.gallery-title {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .gallery-item-overlay > * {
@@ -390,4 +399,22 @@ footer p {
 .code-icon {
   color: var(--primary);
   margin: 5px;
+}
+
+@media screen and (max-width: 425px) {
+  button {
+    height: 25px;
+    width: 100px;
+    margin-bottom: auto;
+  }
+
+  .gallery-description {
+    margin: 0;
+  }
+
+  .gallery-title {
+    margin-bottom: 5px;
+  }
+
+  
 }
