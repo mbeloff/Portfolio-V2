@@ -5,3 +5,9 @@ let tick = () => {
     requestAnimationFrame(tick)
 }
 requestAnimationFrame(tick)
+
+window.onscroll = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElement
+  }
+}

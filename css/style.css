@@ -1,7 +1,7 @@
 :root {
   --primary: #f03f57;
   --secondary: #ff7789;
-  --tertiary: #29e78e;
+  --tertiary: #ff9277;
   --shadow: 0px 10px 20px 2px rgba(0,0,0,0.08), 0px 10px 5px -8px rgba(0,0,0,0.02);
 }
 
@@ -9,12 +9,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  /* background: white; */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   color: rgb(71, 67, 64);
+  position: relative;
 }
 
 header {
@@ -32,6 +36,7 @@ nav {
   max-width: 1200px;
   margin: auto;
   justify-content: space-between;
+  color: var(--primary);
 }
 
 .logo {
@@ -79,8 +84,11 @@ main {
 
 .hero h1 {
   font-weight: 400;
+  letter-spacing: .1em;
+  font-feature-settings: "liga" 0;
   font-size: 2em;
   margin-bottom: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .hero h3 {
@@ -106,8 +114,6 @@ main {
   box-shadow: inset 0 0 15px 5px rgba(0,0,0,.25);
   background-size: contain;
   border-radius: 50%;
-    -webkit-filter: sepia(.25);
-    filter: sepia(.25);
 }
 
 .face-bg {
@@ -154,6 +160,7 @@ main {
 }
 
 .list-h4 {
+  font-family: 'Open Sans';
   font-weight: 400;
   color: var(--primary);
   margin-bottom: 0;
@@ -168,11 +175,21 @@ main {
 .skills ul {
  list-style: none;
  padding: 0;
- font-size: .8em;
+ font-family: 'Open Sans';
+ font-weight: 300;
 }
 
 .list {
   width: 50%;
+}
+
+.card {  
+  background: white;
+  border: 1px var(--primary) solid;
+}
+
+.card i {
+  color: var(--primary);
 }
 
 .card-bottom {
@@ -180,30 +197,21 @@ main {
   display: flex;
   width: 100%;
   background: white;
-  border: 1px var(--primary) solid;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top: 0;
   justify-content: center;
 }
 
-.card {  
-  background: white;
-  border: 1px var(--primary) solid;
-  padding-top: 25px;
-}
-
-.card i {
-  color: var(--primary);
-}
-
 .card-left {
   border-top-left-radius: 10px;
   border-right: 0;
+  padding-top: 25px;
 }
 
 .card-right {
   border-top-right-radius: 10px;
+  padding-top: 25px;
 }
 
 .portfolio {
@@ -240,29 +248,29 @@ main {
 .gallery-item-overlay {
   position: absolute;
   color: white;
+  background: rgba(0,0,0,.75);
   opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 10;
-  background: black;
   width: 100%;
   height: 98.7%;
   bottom: 4px;
   border-radius: 5px;
-  -webkit-transition: .6s ease-in-out;
-  -moz-transition: .6s ease-in-out;
-  -o-transition: .6s ease-in-out;
-  transition: .6s ease-in-out;
+  -webkit-transition: opacity .6s ease-in-out;
+  -moz-transition: opacity .6s ease-in-out;
+  -o-transition: opacity .6s ease-in-out;
+  transition: opacity .6s ease-in-out;
+
 }
 
 .gallery-item-overlay > * {
-  transition: .6s ease-in-out;
+  transition: opacity .6s ease-in-out;
 }
 
 .gallery-item-overlay:hover {
-  opacity: 1;
-  background: rgba(0,0,0,.75);
+  opacity: 1;  
 }
 
 .gallery-item-overlay:hover > * {
@@ -270,14 +278,7 @@ main {
 }
 
 .gallery-button {
-  width: 25%;
-  height: 15%;
-  border: solid 1px rgba(255, 255, 255, .5);
-  border-radius: 10px;
-  background: linear-gradient(-30deg,  #ff9277,var(--secondary), var(--primary) );
-  align-self: center;
-  text-transform: uppercase;
-  font-weight: 600;
+  background: linear-gradient(-30deg,  var(--tertiary),var(--secondary), var(--primary) );
 }
 
 .gallery-link {
@@ -295,7 +296,7 @@ main {
   box-shadow: var(--shadow);
 }
 
-.contact-section {
+.contact {
   padding-top: 25px;
   padding-bottom: 50px;
   display: grid;
@@ -305,6 +306,7 @@ main {
 
 .contact-heading {
   color: white;
+  font-family: 'Open Sans'
 }
 
 .contact-form {
@@ -340,18 +342,18 @@ main {
 }
 
 .form-button {
+  background: linear-gradient(-30deg,  var(--tertiary),var(--secondary) );
+}
+
+button {
   color: white;
   width: 125px;
   height: 50px;
   border: rgba(255, 255, 255, .5) solid 1px;
   border-radius: 10px;
-  align-self: center;
   text-transform: uppercase;
   font-weight: 600;
-  margin: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(-30deg,  #ff9277,var(--secondary) );
+  margin: 10px auto;
   text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }
 
@@ -374,32 +376,4 @@ footer p {
 
 .footer-icon {
   color: var(--primary);
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-webkit-keyframes GradientRotate {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes GradientRotate {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@keyframes GradientRotate { 
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
 }
