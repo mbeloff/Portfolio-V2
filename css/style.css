@@ -21,6 +21,9 @@ body {
   position: relative;
 }
 
+/* ---Nav Style--- */
+/* ---------------- */
+
 header {
   width: 100%;
   background: white;
@@ -61,6 +64,9 @@ nav {
   border-radius: 8px;
   margin-right: 20px;
 }
+
+/* ---Main Styles--- */
+/* ---------------- */
 
 main {
   display: grid;
@@ -122,6 +128,9 @@ main {
   width: 210px;
   border-radius: 50%;
 }
+
+/* ---Bio Styles--- */
+/* ---------------- */
 
 .bio {
   background: var(--primary);
@@ -213,6 +222,9 @@ main {
   border-top-right-radius: 10px;
   padding-top: 25px;
 }
+
+/* ---Portfolio Styles--- */
+/* ---------------- */
 
 .portfolio {
   margin-top: 50px;
@@ -317,6 +329,9 @@ main {
   border-radius: 5px;
   box-shadow: var(--shadow);
 }
+
+/* ---Contact Styles--- */
+/* ---------------- */
 
 .contact {
   padding-top: 25px;

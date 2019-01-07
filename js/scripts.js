@@ -1,3 +1,5 @@
+// Off-axis gradient rotation
+
 let deg = 0
 let el = document.querySelector('.face-bg')
 let tick = () => {
@@ -5,9 +7,3 @@ let tick = () => {
     requestAnimationFrame(tick)
 }
 requestAnimationFrame(tick)
-
-window.onscroll = () => {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElement
-  }
-}
