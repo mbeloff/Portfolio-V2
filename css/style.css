@@ -31,7 +31,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(240,63,87, .3);
+  background-color: rgb(247, 165, 165);
 }
 
 /* ---Nav Style--- */
